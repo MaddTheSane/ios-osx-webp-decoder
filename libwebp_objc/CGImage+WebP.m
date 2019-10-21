@@ -45,7 +45,7 @@ CGImageRef CGImageFromWebPData(CFDataRef data) {
 #endif
     config->options.bypass_filtering = 0;
     config->options.use_threads = 1;
-    config->output.colorspace = MODE_RGBA;
+    config->output.colorspace = MODE_rgbA;
 
     // decode image
     WebPDecode(CFDataGetBytePtr(data), CFDataGetLength(data), config);
