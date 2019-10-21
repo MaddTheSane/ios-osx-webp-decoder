@@ -10,24 +10,26 @@
 #import "NSImage+WebP.h"
 #import "CGImage+WebP.h"
 
-#if !defined(TARGET_OS_IPHONE) && !defined(TARGET_IPHONE_SIMULATOR)
+#if defined(TARGET_OS_OSX) && TARGET_OS_OSX
 
 @implementation NSImage (WebP)
 
 + (instancetype)imageWithWebPNamed:(NSString *)name {
-    NSString *filename = [[NSBundle mainBundle] pathForResource:imageName ofType:@"webp"];
+    NSString *filename = [[NSBundle mainBundle] pathForResource:name ofType:@"webp"];
     return [self imageWithWebPFile:filename];
 }
 
 + (instancetype)imageWithWebPFile:(NSString *)path {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:filename isDirectory:nil]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:nil]) {
         return nil;
     }
 
     NSData *imageData = [NSData dataWithContentsOfFile:path];
 
     CGImageRef imageRef = CGImageFromWebPData((__bridge CFDataRef)(imageData));
-    NSImage *image = [NSImage imageWithCGImage:imageRef];
+	NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+    NSImage *image = [[NSImage alloc] initWithSize:imgRep.size];
+	[image addRepresentation:imgRep];
     CGImageRelease(imageRef);
 
     return image;

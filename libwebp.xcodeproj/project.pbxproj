@@ -46,7 +46,7 @@
 		42E0D2521B44873700932957 /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2491B44873700932957 /* filters.c */; };
 		42E0D2551B4487E500932957 /* CGImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2541B4487E500932957 /* CGImage+WebP.m */; };
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
-		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
 		8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */; };
 		8F160100196FEC8E000DC45D /* NSImage+WebP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F1600FD196FEBBB000DC45D /* NSImage+WebP.h */; };
 		8FA92B90196ED365002C72DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA92B8F196ED365002C72DF /* Foundation.framework */; };

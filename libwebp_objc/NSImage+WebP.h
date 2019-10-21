@@ -7,7 +7,7 @@
  */
 
 #include "TargetConditionals.h"
-#if !defined(TARGET_OS_IPHONE) && !defined(TARGET_IPHONE_SIMULATOR)
+#if defined(TARGET_OS_OSX) && TARGET_OS_OSX
 
 #import <AppKit/AppKit.h>
 
