@@ -6,7 +6,7 @@
  * @date 2014-07-10
  */
 
-#include "TargetConditionals.h"
+#include <TargetConditionals.h>
 #if defined(TARGET_OS_OSX) && TARGET_OS_OSX
 
 #import <AppKit/AppKit.h>

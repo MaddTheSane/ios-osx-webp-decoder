@@ -14,5 +14,5 @@
  * @param data data to decode
  * @returns CGImage with decoded data or NULL, result has to be freed with CGImageRelease()
  */
-CGImageRef CGImageFromWebPData(CFDataRef data);
+CGImageRef CGImageFromWebPData(CFDataRef data) CF_RETURNS_RETAINED;
 

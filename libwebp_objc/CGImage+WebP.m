@@ -36,7 +36,7 @@ CGImageRef CGImageFromWebPData(CFDataRef data) {
     WebPDecoderConfig *config = malloc(sizeof(WebPDecoderConfig));
     WebPInitDecoderConfig(config);
 
-#if defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR)
+#if (defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE) || (defined(TARGET_IPHONE_SIMULATOR) && TARGET_IPHONE_SIMULATOR)
     // speed on iphone
     config->options.no_fancy_upsampling = 1;
 #else
