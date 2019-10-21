@@ -30,8 +30,6 @@
 	return WebPGetInfo(data.bytes, data.length, NULL, NULL) != 0;
 }
 
-//- initwith
-
 - (nullable instancetype)initWithData:(NSData *)data
 {
 	CGImageRef ref = CGImageFromWebPData((__bridge CFDataRef)(data));
@@ -41,14 +39,8 @@
 	if (self = [super init]) {
 		imageRef = ref;
 		/*
-		 @property NSSize size;
-		 @property (getter=hasAlpha) BOOL alpha;
 		 @property (getter=isOpaque) BOOL opaque;
 		 @property (copy) NSColorSpaceName colorSpaceName;
-		 @property NSInteger bitsPerSample;
-		 @property NSInteger pixelsWide;
-		 @property NSInteger pixelsHigh;
-
 		 */
 		self.pixelsHigh = CGImageGetHeight(ref);
 		self.pixelsWide = CGImageGetWidth(ref);
@@ -68,7 +60,6 @@
 {
 	CGImageRelease(imageRef);
 }
-
 
 + (id)imageRepWithContentsOfFile:(NSString *)filename
 {
