@@ -142,8 +142,8 @@
 		42E0D2491B44873700932957 /* filters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filters.c; sourceTree = "<group>"; };
 		42E0D2541B4487E500932957 /* CGImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImage+WebP.m"; sourceTree = "<group>"; };
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
-		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; };
-		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; };
+		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
+		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rescaler_sse2.c; path = libwebp/src/dsp/rescaler_sse2.c; sourceTree = SOURCE_ROOT; };
 		8F1600FD196FEBBB000DC45D /* NSImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+WebP.h"; sourceTree = "<group>"; };
 		8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+WebP.m"; sourceTree = "<group>"; };
@@ -191,6 +191,7 @@
 				8FA92B8D196ED365002C72DF /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		8FA92B8D196ED365002C72DF /* Products */ = {
 			isa = PBXGroup;

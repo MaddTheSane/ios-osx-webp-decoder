@@ -27,9 +27,9 @@
     NSData *imageData = [NSData dataWithContentsOfFile:path];
 
     CGImageRef imageRef = CGImageFromWebPData((__bridge CFDataRef)(imageData));
-	NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+    NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
     NSImage *image = [[NSImage alloc] initWithSize:imgRep.size];
-	[image addRepresentation:imgRep];
+    [image addRepresentation:imgRep];
     CGImageRelease(imageRef);
 
     return image;
