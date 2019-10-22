@@ -11,9 +11,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define WEBPMacExport __attribute__((visibility("default")))
+
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT
+WEBPMacExport
 @interface TSSTWebPImageRep : NSImageRep
 - (nullable instancetype)initWithData:(NSData *)data;
 @end
