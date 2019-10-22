@@ -67,7 +67,7 @@
 	if (aDat == nil) {
 		return nil;
 	}
-	return [[TSSTWebPImageRep alloc] initWithData:aDat];
+	return [self imageRepWithData:aDat];
 }
 
 + (id)imageRepWithContentsOfURL:(NSURL *)url
@@ -76,7 +76,7 @@
 	if (aDat == nil) {
 		return nil;
 	}
-	return [[TSSTWebPImageRep alloc] initWithData:aDat];
+	return [self imageRepWithData:aDat];
 }
 
 - (BOOL)draw

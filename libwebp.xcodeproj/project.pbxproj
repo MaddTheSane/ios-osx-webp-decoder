@@ -595,6 +595,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/webp.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"WEBP_EXTERN=extern",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -607,6 +611,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/webp.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"WEBP_EXTERN=extern",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
