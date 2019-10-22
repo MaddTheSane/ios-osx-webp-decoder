@@ -46,8 +46,12 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
+		55DC37F4235EA7A100132291 /* WebPMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871F51235EA34900528BDF /* WebPMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D12196FE92D00C5FB7D /* CGImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871EE2235D776400528BDF /* TSSTWebPImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F7235EA7B100132291 /* NSImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F8235EA7B800132291 /* UIImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D0A196FE83F00C5FB7D /* UIImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */; };
-		8F160100196FEC8E000DC45D /* NSImage+WebP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F1600FD196FEBBB000DC45D /* NSImage+WebP.h */; };
 		8FA92B90196ED365002C72DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA92B8F196ED365002C72DF /* Foundation.framework */; };
 		8FA92C15196ED453002C72DF /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C06196ED453002C72DF /* cpu.c */; };
 		8FA92C16196ED453002C72DF /* dec_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C07196ED453002C72DF /* dec_neon.c */; };
@@ -59,24 +63,7 @@
 		8FA92C1F196ED453002C72DF /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C12196ED453002C72DF /* upsampling.c */; };
 		8FA92C20196ED453002C72DF /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C13196ED453002C72DF /* yuv.c */; };
 		8FE36D0C196FE83F00C5FB7D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE36D0B196FE83F00C5FB7D /* UIImage+WebP.m */; };
-		8FE36D0F196FE8AA00C5FB7D /* UIImage+WebP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8FE36D0A196FE83F00C5FB7D /* UIImage+WebP.h */; };
-		8FE36D13196FEA8B00C5FB7D /* CGImage+WebP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8FE36D12196FE92D00C5FB7D /* CGImage+WebP.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8FA92B8A196ED365002C72DF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				8F160100196FEC8E000DC45D /* NSImage+WebP.h in CopyFiles */,
-				8FE36D13196FEA8B00C5FB7D /* CGImage+WebP.h in CopyFiles */,
-				8FE36D0F196FE8AA00C5FB7D /* UIImage+WebP.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		42E0D1ED1B44858700932957 /* dec_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dec_sse41.c; sourceTree = "<group>"; };
@@ -142,12 +129,14 @@
 		42E0D2491B44873700932957 /* filters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filters.c; sourceTree = "<group>"; };
 		42E0D2541B4487E500932957 /* CGImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImage+WebP.m"; sourceTree = "<group>"; };
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
-		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
-		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
+		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
+		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rescaler_sse2.c; path = libwebp/src/dsp/rescaler_sse2.c; sourceTree = SOURCE_ROOT; };
-		8F1600FD196FEBBB000DC45D /* NSImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+WebP.h"; sourceTree = "<group>"; };
+		55871F51235EA34900528BDF /* WebPMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPMac.h; sourceTree = "<group>"; };
+		55871F53235EA38300528BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImage_WebP.h; sourceTree = "<group>"; };
 		8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+WebP.m"; sourceTree = "<group>"; };
-		8FA92B8C196ED365002C72DF /* libwebp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libwebp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA92B8C196ED365002C72DF /* WebPMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebPMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA92B8F196ED365002C72DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FA92B9D196ED365002C72DF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8FA92BA0196ED365002C72DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -163,9 +152,9 @@
 		8FA92C12196ED453002C72DF /* upsampling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = upsampling.c; sourceTree = "<group>"; };
 		8FA92C13196ED453002C72DF /* yuv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv.c; sourceTree = "<group>"; };
 		8FA92C14196ED453002C72DF /* yuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yuv.h; sourceTree = "<group>"; };
-		8FE36D0A196FE83F00C5FB7D /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		8FE36D0A196FE83F00C5FB7D /* UIImage_WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage_WebP.h; sourceTree = "<group>"; };
 		8FE36D0B196FE83F00C5FB7D /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
-		8FE36D12196FE92D00C5FB7D /* CGImage+WebP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGImage+WebP.h"; sourceTree = "<group>"; };
+		8FE36D12196FE92D00C5FB7D /* CGImage_WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGImage_WebP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +169,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55871F50235EA33800528BDF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				55871F51235EA34900528BDF /* WebPMac.h */,
+				55871F53235EA38300528BDF /* Info.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		8FA92B83196ED365002C72DF = {
 			isa = PBXGroup;
 			children = (
+				55871F50235EA33800528BDF /* Framework */,
 				8FE36D0D196FE86E00C5FB7D /* Common */,
 				8FE36D0E196FE87400C5FB7D /* OSX */,
 				8FE36D09196FE80200C5FB7D /* iOS */,
@@ -196,7 +195,7 @@
 		8FA92B8D196ED365002C72DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FA92B8C196ED365002C72DF /* libwebp.a */,
+				8FA92B8C196ED365002C72DF /* WebPMac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -353,7 +352,7 @@
 		8FE36D09196FE80200C5FB7D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8FE36D0A196FE83F00C5FB7D /* UIImage+WebP.h */,
+				8FE36D0A196FE83F00C5FB7D /* UIImage_WebP.h */,
 				8FE36D0B196FE83F00C5FB7D /* UIImage+WebP.m */,
 			);
 			name = iOS;
@@ -363,8 +362,8 @@
 		8FE36D0D196FE86E00C5FB7D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8FE36D12196FE92D00C5FB7D /* CGImage_WebP.h */,
 				42E0D2541B4487E500932957 /* CGImage+WebP.m */,
-				8FE36D12196FE92D00C5FB7D /* CGImage+WebP.h */,
 			);
 			name = Common;
 			path = libwebp_objc;
@@ -375,7 +374,7 @@
 			children = (
 				55871EE2235D776400528BDF /* TSSTWebPImageRep.h */,
 				55871EE3235D776400528BDF /* TSSTWebPImageRep.m */,
-				8F1600FD196FEBBB000DC45D /* NSImage+WebP.h */,
+				8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */,
 				8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */,
 			);
 			name = OSX;
@@ -384,23 +383,38 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		55DC37F3235EA79C00132291 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */,
+				55DC37F7235EA7B100132291 /* NSImage_WebP.h in Headers */,
+				55DC37F8235EA7B800132291 /* UIImage_WebP.h in Headers */,
+				55DC37F4235EA7A100132291 /* WebPMac.h in Headers */,
+				55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		8FA92B8B196ED365002C72DF /* webp */ = {
+		8FA92B8B196ED365002C72DF /* WebPMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FA92BAF196ED365002C72DF /* Build configuration list for PBXNativeTarget "webp" */;
+			buildConfigurationList = 8FA92BAF196ED365002C72DF /* Build configuration list for PBXNativeTarget "WebPMac" */;
 			buildPhases = (
+				55DC37F3235EA79C00132291 /* Headers */,
 				8FA92B88196ED365002C72DF /* Sources */,
 				8FA92B89196ED365002C72DF /* Frameworks */,
-				8FA92B8A196ED365002C72DF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = webp;
+			name = WebPMac;
 			productName = webp;
-			productReference = 8FA92B8C196ED365002C72DF /* libwebp.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 8FA92B8C196ED365002C72DF /* WebPMac.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -423,7 +437,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FA92B8B196ED365002C72DF /* webp */,
+				8FA92B8B196ED365002C72DF /* WebPMac */,
 			);
 		};
 /* End PBXProject section */
@@ -596,12 +610,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/webp.dst;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"WEBP_EXTERN=extern",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = Framework/Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = planetmutlu.webpmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/libwebp";
@@ -612,12 +629,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/webp.dst;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"WEBP_EXTERN=extern",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = Framework/Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = planetmutlu.webpmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/libwebp";
@@ -636,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FA92BAF196ED365002C72DF /* Build configuration list for PBXNativeTarget "webp" */ = {
+		8FA92BAF196ED365002C72DF /* Build configuration list for PBXNativeTarget "WebPMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FA92BB0196ED365002C72DF /* Debug */,

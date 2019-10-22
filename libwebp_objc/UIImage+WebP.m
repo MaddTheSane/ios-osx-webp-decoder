@@ -7,8 +7,8 @@
  */
 
 #import "decode.h"
-#import "UIImage+WebP.h"
-#import "CGImage+WebP.h"
+#import "UIImage_WebP.h"
+#import "CGImage_WebP.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 

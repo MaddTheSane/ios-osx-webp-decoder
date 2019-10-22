@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__ ((visibility ("default")))
 @interface TSSTWebPImageRep : NSImageRep
 - (nullable instancetype)initWithData:(NSData *)data;
 @end

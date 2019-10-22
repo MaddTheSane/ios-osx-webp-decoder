@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FA92B8B196ED365002C72DF"
-               BuildableName = "libwebp.a"
-               BlueprintName = "webp"
+               BuildableName = "WebPMac.framework"
+               BlueprintName = "WebPMac"
                ReferencedContainer = "container:libwebp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

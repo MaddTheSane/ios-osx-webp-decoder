@@ -7,8 +7,8 @@
  */
 
 
-#import "CGImage+WebP.h"
-#import "decode.h"
+#import "CGImage_WebP.h"
+#include "decode.h"
 
 /** @brief callback function of CoreGraphics to free underlying memory */
 static void free_data(void *info, const void *data, size_t size) {

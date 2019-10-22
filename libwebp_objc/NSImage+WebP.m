@@ -7,8 +7,8 @@
  */
 
 #import "decode.h"
-#import "NSImage+WebP.h"
-#import "CGImage+WebP.h"
+#import "NSImage_WebP.h"
+#import "CGImage_WebP.h"
 
 #if defined(TARGET_OS_OSX) && TARGET_OS_OSX
 

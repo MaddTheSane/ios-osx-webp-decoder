@@ -8,7 +8,7 @@
 
 #import "TSSTWebPImageRep.h"
 #if defined(TARGET_OS_OSX) && TARGET_OS_OSX
-#import "CGImage+WebP.h"
+#import "CGImage_WebP.h"
 #include "decode.h"
 
 @implementation TSSTWebPImageRep {

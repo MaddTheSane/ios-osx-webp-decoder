@@ -6,7 +6,7 @@
  * @date 2014-07-10
  */
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 @import CoreGraphics;
 
 /* @brief load WebP image data and create a CGImage from it
