@@ -7,12 +7,12 @@
  */
 
 #import <Foundation/Foundation.h>
-@import CoreGraphics;
+#include <CoreGraphics/CoreGraphics.h>
 
-/* @brief load WebP image data and create a CGImage from it
+/*! @brief load WebP image data and create a CGImage from it
  *
  * @param data data to decode
- * @returns CGImage with decoded data or NULL, result has to be freed with CGImageRelease()
+ * @returns @c CGImage with decoded data or NULL, result has to be freed with @c CGImageRelease()
  */
-CGImageRef CGImageFromWebPData(CFDataRef data) CF_RETURNS_RETAINED;
+FOUNDATION_EXPORT CGImageRef _Nullable CGImageFromWebPData(CFDataRef _Nonnull data) CF_RETURNS_RETAINED;
 
