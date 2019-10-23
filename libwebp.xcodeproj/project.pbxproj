@@ -131,7 +131,7 @@
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
 		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
 		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
-		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rescaler_sse2.c; path = libwebp/src/dsp/rescaler_sse2.c; sourceTree = SOURCE_ROOT; };
+		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_sse2.c; sourceTree = "<group>"; };
 		55871F51235EA34900528BDF /* WebPMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPMac.h; sourceTree = "<group>"; };
 		55871F53235EA38300528BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImage_WebP.h; sourceTree = "<group>"; };
@@ -280,7 +280,6 @@
 				42E0D20C1B44865500932957 /* quant_levels_dec_utils.c */,
 				42E0D20D1B44865500932957 /* quant_levels_utils.c */,
 				42E0D20E1B44865500932957 /* random_utils.c */,
-				55871F03235E5B5800528BDF /* rescaler_sse2.c */,
 				42E0D20F1B44865500932957 /* rescaler_utils.c */,
 				42E0D2101B44865500932957 /* thread_utils.c */,
 				42E0D2111B44865500932957 /* utils.c */,
@@ -330,6 +329,7 @@
 				42E0D1F21B4485D800932957 /* lossless_sse2.c */,
 				8FA92C0E196ED453002C72DF /* lossless.c */,
 				42E0D2561B448AA300932957 /* rescaler.c */,
+				55871F03235E5B5800528BDF /* rescaler_sse2.c */,
 				8FA92C10196ED453002C72DF /* upsampling_neon.c */,
 				8FA92C11196ED453002C72DF /* upsampling_sse2.c */,
 				8FA92C12196ED453002C72DF /* upsampling.c */,
