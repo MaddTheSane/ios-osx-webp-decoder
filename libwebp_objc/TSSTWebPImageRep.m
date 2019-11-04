@@ -40,8 +40,8 @@
 		imageRef = ref;
 		/*
 		 @property (getter=isOpaque) BOOL opaque;
-		 @property (copy) NSColorSpaceName colorSpaceName;
 		 */
+		self.colorSpaceName = NSCalibratedRGBColorSpace;
 		self.pixelsHigh = CGImageGetHeight(ref);
 		self.pixelsWide = CGImageGetWidth(ref);
 		self.bitsPerSample = CGImageGetBitsPerComponent(ref);
