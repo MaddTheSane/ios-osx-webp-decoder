@@ -9,11 +9,11 @@
 #ifndef WebP_h
 #define WebP_h
 
-#include <WebP/CGImage_WebP.h>
+#include <WebPMac/CGImage_WebP.h>
 #ifdef __OBJC__
-#import <WebP/TSSTWebPImageRep.h>
-#import <WebP/NSImage_WebP.h>
-#import <WebP/UIImage_WebP.h>
+#import <WebPMac/TSSTWebPImageRep.h>
+#import <WebPMac/NSImage_WebP.h>
+#import <WebPMac/UIImage_WebP.h>
 #endif
 
 #endif /* WebP_h */
