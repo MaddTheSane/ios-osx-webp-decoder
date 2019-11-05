@@ -82,7 +82,7 @@
 - (BOOL)draw
 {
 	CGContextRef ourRef = NSGraphicsContext.currentContext.CGContext;
-	CGContextDrawImage(ourRef, CGRectMake(0, 0, CGImageGetWidth(imageRef), CGImageGetHeight(imageRef)), imageRef);
+	CGContextDrawImage(ourRef, CGRectMake(0, 0, self.size.width, self.size.height), imageRef);
 	return YES;
 }
 
