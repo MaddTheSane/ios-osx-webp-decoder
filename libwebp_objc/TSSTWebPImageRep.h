@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 WEBPMacExport
 @interface TSSTWebPImageRep : NSImageRep
 - (nullable instancetype)initWithData:(NSData *)data;
++ (nullable instancetype)imageRepWithContentsOfFile:(NSString *)filename;
++ (nullable instancetype)imageRepWithContentsOfURL:(NSURL *)url;
 @end
 
 NS_ASSUME_NONNULL_END
