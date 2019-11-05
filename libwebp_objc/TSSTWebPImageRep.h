@@ -11,7 +11,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+#ifndef WEBPMacExport
 #define WEBPMacExport __attribute__((visibility("default")))
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

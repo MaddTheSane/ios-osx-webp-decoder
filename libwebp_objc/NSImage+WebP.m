@@ -9,6 +9,7 @@
 #import "decode.h"
 #import "NSImage_WebP.h"
 #import "CGImage_WebP.h"
+#import "TSSTWebPImageRep.h"
 
 #if defined(TARGET_OS_OSX) && TARGET_OS_OSX
 
@@ -16,6 +17,17 @@
 
 + (instancetype)imageWithWebPNamed:(NSString *)name {
     NSString *filename = [[NSBundle mainBundle] pathForResource:name ofType:@"webp"];
+    NSString *filenameX2 = [[NSBundle mainBundle] pathForResource:[name stringByAppendingString:@"@2x"] ofType:@"webp"];
+    if (filenameX2) {
+        NSImageRep *x1, *x2;
+        x1 = [TSSTWebPImageRep imageRepWithContentsOfFile:filename];
+        x2 = [TSSTWebPImageRep imageRepWithContentsOfFile:filenameX2];
+        NSImage *image = [[NSImage alloc] initWithSize:x1.size];
+        [image addRepresentation:x1];
+        x2.size = x1.size;
+        [image addRepresentation:x2];
+        return image;
+    }
     return [self imageWithWebPFile:filename];
 }
 
@@ -26,11 +38,12 @@
 
     NSData *imageData = [NSData dataWithContentsOfFile:path];
 
-    CGImageRef imageRef = CGImageFromWebPData((__bridge CFDataRef)(imageData));
-    NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+    TSSTWebPImageRep *imgRep = [[TSSTWebPImageRep alloc] initWithData:imageData];
+    if (!imgRep) {
+        return nil;
+    }
     NSImage *image = [[NSImage alloc] initWithSize:imgRep.size];
     [image addRepresentation:imgRep];
-    CGImageRelease(imageRef);
 
     return image;
 }
