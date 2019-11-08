@@ -46,6 +46,11 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
+		5598662F237519CA00F5A744 /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598662E237519CA00F5A744 /* lossless_common.h */; };
+		5598663423751A0500F5A744 /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663023751A0400F5A744 /* common_sse41.h */; };
+		5598663523751A0500F5A744 /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663123751A0400F5A744 /* neon.h */; };
+		5598663623751A0500F5A744 /* quant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663223751A0400F5A744 /* quant.h */; };
+		5598663723751A0500F5A744 /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663323751A0400F5A744 /* common_sse2.h */; };
 		55DC37F4235EA7A100132291 /* WebPMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871F51235EA34900528BDF /* WebPMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D12196FE92D00C5FB7D /* CGImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871EE2235D776400528BDF /* TSSTWebPImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -134,6 +139,11 @@
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_sse2.c; sourceTree = "<group>"; };
 		55871F51235EA34900528BDF /* WebPMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPMac.h; sourceTree = "<group>"; };
 		55871F53235EA38300528BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5598662E237519CA00F5A744 /* lossless_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lossless_common.h; sourceTree = "<group>"; };
+		5598663023751A0400F5A744 /* common_sse41.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_sse41.h; sourceTree = "<group>"; };
+		5598663123751A0400F5A744 /* neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon.h; sourceTree = "<group>"; };
+		5598663223751A0400F5A744 /* quant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quant.h; sourceTree = "<group>"; };
+		5598663323751A0400F5A744 /* common_sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_sse2.h; sourceTree = "<group>"; };
 		8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImage_WebP.h; sourceTree = "<group>"; };
 		8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+WebP.m"; sourceTree = "<group>"; };
 		8FA92B8C196ED365002C72DF /* WebPMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebPMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,8 +352,13 @@
 		8FA92C21196ED455002C72DF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				5598663323751A0400F5A744 /* common_sse2.h */,
+				5598663023751A0400F5A744 /* common_sse41.h */,
 				8FA92C0A196ED453002C72DF /* dsp.h */,
+				5598662E237519CA00F5A744 /* lossless_common.h */,
 				8FA92C0F196ED453002C72DF /* lossless.h */,
+				5598663123751A0400F5A744 /* neon.h */,
+				5598663223751A0400F5A744 /* quant.h */,
 				8FA92C14196ED453002C72DF /* yuv.h */,
 			);
 			name = Headers;
@@ -388,8 +403,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5598663423751A0500F5A744 /* common_sse41.h in Headers */,
 				55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */,
+				5598662F237519CA00F5A744 /* lossless_common.h in Headers */,
+				5598663623751A0500F5A744 /* quant.h in Headers */,
+				5598663723751A0500F5A744 /* common_sse2.h in Headers */,
 				55DC37F7235EA7B100132291 /* NSImage_WebP.h in Headers */,
+				5598663523751A0500F5A744 /* neon.h in Headers */,
 				55DC37F8235EA7B800132291 /* UIImage_WebP.h in Headers */,
 				55DC37F4235EA7A100132291 /* WebPMac.h in Headers */,
 				55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */,
