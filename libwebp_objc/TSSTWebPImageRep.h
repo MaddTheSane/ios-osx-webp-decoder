@@ -17,6 +17,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*!
+ *	@abstract Simple \c NSImageRep for WebP images.
+ *	@discussion Limitations: No amimation support. Cannot access base WebP data. Cannot access
+ *	raw pixels.
+ */
 WEBPMacExport
 @interface TSSTWebPImageRep : NSImageRep
 - (nullable instancetype)initWithData:(NSData *)data;

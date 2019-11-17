@@ -51,10 +51,10 @@ CGImageRef CGImageFromWebPData(CFDataRef data) {
     WebPDecode(CFDataGetBytePtr(data), CFDataGetLength(data), config);
 
     // create image provider on output of webp decoder
-    CGDataProviderRef provider = CGDataProviderCreateWithData(config, config->output.u.RGBA.rgba, width*height*4, free_data);;
+    CGDataProviderRef provider = CGDataProviderCreateWithData(config, config->output.u.RGBA.rgba, width*height*4, free_data);
 
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateWithName(kCGColorSpaceSRGB);
-    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;
+    const CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;
     CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
 
     // create cgimage from the provider, use stride from the decoder
