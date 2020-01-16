@@ -29,6 +29,7 @@ CGImageRef CGImageFromWebPData(CFDataRef data) {
     WebPGetInfo(CFDataGetBytePtr(data), CFDataGetLength(data), &width, &height);
 
     if ((width == 0) || (height == 0)) {
+        CFRelease(data);
         return NULL; // could not read image
     }
 
