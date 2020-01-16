@@ -16,6 +16,15 @@
 @implementation NSImage (WebP)
 
 + (instancetype)imageWithWebPNamed:(NSString *)name {
+    NSDataAsset *asset = [[NSDataAsset alloc] initWithName:name];
+    if (asset && [asset.typeIdentifier isEqualToString:@"public.webp"]) {
+        NSData *assetData = asset.data;
+        NSImageRep *rep = [[TSSTWebPImageRep alloc] initWithData:assetData];
+        NSImage *image = [[NSImage alloc] initWithSize:rep.size];
+        [image addRepresentation:rep];
+        image.name = name;
+        return image;
+    }
     NSString *filename = [[NSBundle mainBundle] pathForResource:name ofType:@"webp"];
     NSString *filenameX2 = [[NSBundle mainBundle] pathForResource:[name stringByAppendingString:@"@2x"] ofType:@"webp"];
     if (filenameX2) {
@@ -26,6 +35,7 @@
         [image addRepresentation:x1];
         x2.size = x1.size;
         [image addRepresentation:x2];
+        image.name = name;
         return image;
     }
     return [self imageWithWebPFile:filename];
