@@ -46,6 +46,11 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
+		5590EB2C24A1D61800DA060E /* cost_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2B24A1D61800DA060E /* cost_neon.c */; };
+		5590EB2E24A1D65700DA060E /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2D24A1D65700DA060E /* filters_neon.c */; };
+		5590EB3024A1D68E00DA060E /* yuv_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2F24A1D68E00DA060E /* yuv_neon.c */; };
+		5590EB3224A1D6AC00DA060E /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB3124A1D6AC00DA060E /* rescaler_neon.c */; };
+		5590EB3424A1D6CC00DA060E /* alpha_processing_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB3324A1D6CC00DA060E /* alpha_processing_neon.c */; };
 		5598662F237519CA00F5A744 /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598662E237519CA00F5A744 /* lossless_common.h */; };
 		5598663423751A0500F5A744 /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663023751A0400F5A744 /* common_sse41.h */; };
 		5598663523751A0500F5A744 /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663123751A0400F5A744 /* neon.h */; };
@@ -139,6 +144,11 @@
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_sse2.c; sourceTree = "<group>"; };
 		55871F51235EA34900528BDF /* WebPMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPMac.h; sourceTree = "<group>"; };
 		55871F53235EA38300528BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5590EB2B24A1D61800DA060E /* cost_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cost_neon.c; sourceTree = "<group>"; };
+		5590EB2D24A1D65700DA060E /* filters_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filters_neon.c; sourceTree = "<group>"; };
+		5590EB2F24A1D68E00DA060E /* yuv_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv_neon.c; sourceTree = "<group>"; };
+		5590EB3124A1D6AC00DA060E /* rescaler_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_neon.c; sourceTree = "<group>"; };
+		5590EB3324A1D6CC00DA060E /* alpha_processing_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = alpha_processing_neon.c; sourceTree = "<group>"; };
 		5598662E237519CA00F5A744 /* lossless_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lossless_common.h; sourceTree = "<group>"; };
 		5598663023751A0400F5A744 /* common_sse41.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_sse41.h; sourceTree = "<group>"; };
 		5598663123751A0400F5A744 /* neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon.h; sourceTree = "<group>"; };
@@ -323,11 +333,14 @@
 			children = (
 				8FA92C21196ED455002C72DF /* Headers */,
 				8FA92C06196ED453002C72DF /* cpu.c */,
+				5590EB3324A1D6CC00DA060E /* alpha_processing_neon.c */,
 				42E0D2411B44873700932957 /* alpha_processing_sse2.c */,
 				42E0D2421B44873700932957 /* alpha_processing_sse41.c */,
 				42E0D2431B44873700932957 /* alpha_processing.c */,
+				5590EB2B24A1D61800DA060E /* cost_neon.c */,
 				42E0D2461B44873700932957 /* cost_sse2.c */,
 				42E0D2471B44873700932957 /* cost.c */,
+				5590EB2D24A1D65700DA060E /* filters_neon.c */,
 				42E0D2481B44873700932957 /* filters_sse2.c */,
 				42E0D2491B44873700932957 /* filters.c */,
 				8FA92C07196ED453002C72DF /* dec_neon.c */,
@@ -339,11 +352,13 @@
 				42E0D1F21B4485D800932957 /* lossless_sse2.c */,
 				8FA92C0E196ED453002C72DF /* lossless.c */,
 				42E0D2561B448AA300932957 /* rescaler.c */,
+				5590EB3124A1D6AC00DA060E /* rescaler_neon.c */,
 				55871F03235E5B5800528BDF /* rescaler_sse2.c */,
 				8FA92C10196ED453002C72DF /* upsampling_neon.c */,
 				8FA92C11196ED453002C72DF /* upsampling_sse2.c */,
 				8FA92C12196ED453002C72DF /* upsampling.c */,
 				8FA92C13196ED453002C72DF /* yuv.c */,
+				5590EB2F24A1D68E00DA060E /* yuv_neon.c */,
 				42E0D1F51B44860500932957 /* yuv_sse2.c */,
 			);
 			path = dsp;
@@ -475,6 +490,7 @@
 				8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */,
 				42E0D2401B4486B800932957 /* webp_dec.c in Sources */,
 				42E0D23E1B4486B800932957 /* vp8_dec.c in Sources */,
+				5590EB3224A1D6AC00DA060E /* rescaler_neon.c in Sources */,
 				42E0D1F61B44860500932957 /* yuv_sse2.c in Sources */,
 				8FA92C18196ED453002C72DF /* dec.c in Sources */,
 				42E0D21A1B44865500932957 /* random_utils.c in Sources */,
@@ -490,10 +506,14 @@
 				42E0D2371B4486B800932957 /* alpha_dec.c in Sources */,
 				42E0D21B1B44865500932957 /* rescaler_utils.c in Sources */,
 				8FA92C1D196ED453002C72DF /* upsampling_neon.c in Sources */,
+				5590EB2E24A1D65700DA060E /* filters_neon.c in Sources */,
+				5590EB3424A1D6CC00DA060E /* alpha_processing_neon.c in Sources */,
 				42E0D21C1B44865500932957 /* thread_utils.c in Sources */,
 				8FA92C16196ED453002C72DF /* dec_neon.c in Sources */,
 				42E0D2171B44865500932957 /* huffman_utils.c in Sources */,
+				5590EB2C24A1D61800DA060E /* cost_neon.c in Sources */,
 				8FA92C15196ED453002C72DF /* cpu.c in Sources */,
+				5590EB3024A1D68E00DA060E /* yuv_neon.c in Sources */,
 				42E0D23B1B4486B800932957 /* io_dec.c in Sources */,
 				42E0D2141B44865500932957 /* color_cache_utils.c in Sources */,
 				42E0D2381B4486B800932957 /* buffer_dec.c in Sources */,
