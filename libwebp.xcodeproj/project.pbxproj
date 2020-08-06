@@ -44,6 +44,8 @@
 		42E0D2521B44873700932957 /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2491B44873700932957 /* filters.c */; };
 		42E0D2551B4487E500932957 /* CGImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2541B4487E500932957 /* CGImage+WebP.m */; };
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
+		5515817424DB816C00105AEE /* yuv_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817324DB816C00105AEE /* yuv_sse41.c */; };
+		5515817624DB819700105AEE /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817524DB819700105AEE /* upsampling_sse41.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
 		5590EB2C24A1D61800DA060E /* cost_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2B24A1D61800DA060E /* cost_neon.c */; };
@@ -139,6 +141,8 @@
 		42E0D2491B44873700932957 /* filters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filters.c; sourceTree = "<group>"; };
 		42E0D2541B4487E500932957 /* CGImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGImage+WebP.m"; sourceTree = "<group>"; };
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
+		5515817324DB816C00105AEE /* yuv_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv_sse41.c; sourceTree = "<group>"; };
+		5515817524DB819700105AEE /* upsampling_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = upsampling_sse41.c; sourceTree = "<group>"; };
 		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
 		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_sse2.c; sourceTree = "<group>"; };
@@ -356,10 +360,12 @@
 				55871F03235E5B5800528BDF /* rescaler_sse2.c */,
 				8FA92C10196ED453002C72DF /* upsampling_neon.c */,
 				8FA92C11196ED453002C72DF /* upsampling_sse2.c */,
+				5515817524DB819700105AEE /* upsampling_sse41.c */,
 				8FA92C12196ED453002C72DF /* upsampling.c */,
 				8FA92C13196ED453002C72DF /* yuv.c */,
 				5590EB2F24A1D68E00DA060E /* yuv_neon.c */,
 				42E0D1F51B44860500932957 /* yuv_sse2.c */,
+				5515817324DB816C00105AEE /* yuv_sse41.c */,
 			);
 			path = dsp;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 				42E0D2181B44865500932957 /* quant_levels_dec_utils.c in Sources */,
 				42E0D1F41B4485D800932957 /* lossless_sse2.c in Sources */,
 				8FA92C20196ED453002C72DF /* yuv.c in Sources */,
+				5515817424DB816C00105AEE /* yuv_sse41.c in Sources */,
 				42E0D2521B44873700932957 /* filters.c in Sources */,
 				42E0D21F1B44866600932957 /* demux.c in Sources */,
 				42E0D2511B44873700932957 /* filters_sse2.c in Sources */,
@@ -530,6 +537,7 @@
 				42E0D24F1B44873700932957 /* cost_sse2.c in Sources */,
 				8FA92C1E196ED453002C72DF /* upsampling_sse2.c in Sources */,
 				42E0D2501B44873700932957 /* cost.c in Sources */,
+				5515817624DB819700105AEE /* upsampling_sse41.c in Sources */,
 				42E0D2571B448AA300932957 /* rescaler.c in Sources */,
 				42E0D24C1B44873700932957 /* alpha_processing.c in Sources */,
 				42E0D1F31B4485D800932957 /* lossless_neon.c in Sources */,
@@ -594,7 +602,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
-				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64 x86_64h";
 			};
 			name = Debug;
 		};
@@ -642,13 +650,17 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386 x86_64 x86_64h";
 			};
 			name = Release;
 		};
 		8FA92BB0196ED365002C72DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ARCHS[sdk=macosx*]" = (
+					"$(ARCHS_STANDARD)",
+					x86_64h,
+				);
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/webp.dst;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -669,6 +681,10 @@
 		8FA92BB1196ED365002C72DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ARCHS[sdk=macosx*]" = (
+					"$(ARCHS_STANDARD)",
+					x86_64h,
+				);
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/webp.dst;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
