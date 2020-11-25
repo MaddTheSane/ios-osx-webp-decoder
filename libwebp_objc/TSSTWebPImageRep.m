@@ -20,7 +20,7 @@
 	static NSArray *utis;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		utis = @[@"public.webp"];
+		utis = @[@"org.webmproject.webp"];
 	});
 	return utis;
 }

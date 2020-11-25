@@ -25,9 +25,9 @@
 				<string>public.image</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Google's WebP</string>
+			<string>Google&apos;s WebP</string>
 			<key>UTTypeIdentifier</key>
-			<string>public.webp</string>
+			<string>org.webmproject.webp</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
