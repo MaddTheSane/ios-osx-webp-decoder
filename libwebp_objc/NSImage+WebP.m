@@ -17,7 +17,7 @@
 
 + (instancetype)imageWithWebPNamed:(NSString *)name {
     NSDataAsset *asset = [[NSDataAsset alloc] initWithName:name];
-    if (asset && [asset.typeIdentifier isEqualToString:@"public.webp"]) {
+    if (asset && [asset.typeIdentifier isEqualToString:@"org.webmproject.webp"]) {
         NSData *assetData = asset.data;
         NSImageRep *rep = [[TSSTWebPImageRep alloc] initWithData:assetData];
         NSImage *image = [[NSImage alloc] initWithSize:rep.size];
