@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,7 +46,7 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		5515817424DB816C00105AEE /* yuv_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817324DB816C00105AEE /* yuv_sse41.c */; };
 		5515817624DB819700105AEE /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817524DB819700105AEE /* upsampling_sse41.c */; };
-		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; };
+		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; platformFilters = (macos, ); };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
 		5590EB2C24A1D61800DA060E /* cost_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2B24A1D61800DA060E /* cost_neon.c */; };
 		5590EB2E24A1D65700DA060E /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2D24A1D65700DA060E /* filters_neon.c */; };
@@ -60,10 +60,10 @@
 		5598663723751A0500F5A744 /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 5598663323751A0400F5A744 /* common_sse2.h */; };
 		55DC37F4235EA7A100132291 /* WebPMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871F51235EA34900528BDF /* WebPMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D12196FE92D00C5FB7D /* CGImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871EE2235D776400528BDF /* TSSTWebPImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55DC37F7235EA7B100132291 /* NSImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55DC37F8235EA7B800132291 /* UIImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D0A196FE83F00C5FB7D /* UIImage_WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */; };
+		55DC37F6235EA7B100132291 /* TSSTWebPImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 55871EE2235D776400528BDF /* TSSTWebPImageRep.h */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F7235EA7B100132291 /* NSImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1600FD196FEBBB000DC45D /* NSImage_WebP.h */; platformFilters = (macos, ); settings = {ATTRIBUTES = (Public, ); }; };
+		55DC37F8235EA7B800132291 /* UIImage_WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE36D0A196FE83F00C5FB7D /* UIImage_WebP.h */; platformFilters = (ios, maccatalyst, tvos, ); settings = {ATTRIBUTES = (Public, ); }; };
+		8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1600FE196FEBBB000DC45D /* NSImage+WebP.m */; platformFilters = (macos, ); };
 		8FA92B90196ED365002C72DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA92B8F196ED365002C72DF /* Foundation.framework */; };
 		8FA92C15196ED453002C72DF /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C06196ED453002C72DF /* cpu.c */; };
 		8FA92C16196ED453002C72DF /* dec_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C07196ED453002C72DF /* dec_neon.c */; };
@@ -74,7 +74,7 @@
 		8FA92C1E196ED453002C72DF /* upsampling_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C11196ED453002C72DF /* upsampling_sse2.c */; };
 		8FA92C1F196ED453002C72DF /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C12196ED453002C72DF /* upsampling.c */; };
 		8FA92C20196ED453002C72DF /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 8FA92C13196ED453002C72DF /* yuv.c */; };
-		8FE36D0C196FE83F00C5FB7D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE36D0B196FE83F00C5FB7D /* UIImage+WebP.m */; };
+		8FE36D0C196FE83F00C5FB7D /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE36D0B196FE83F00C5FB7D /* UIImage+WebP.m */; platformFilters = (ios, maccatalyst, tvos, ); };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -463,11 +463,11 @@
 		8FA92B84196ED365002C72DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = planetmutlu;
 			};
 			buildConfigurationList = 8FA92B87196ED365002C72DF /* Build configuration list for PBXProject "libwebp" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -574,6 +574,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -597,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -629,6 +630,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -645,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
@@ -666,10 +668,16 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = Framework/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = planetmutlu.webpmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/libwebp";
 			};
 			name = Debug;
@@ -686,10 +694,16 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = Framework/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = planetmutlu.webpmac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/libwebp";
 			};
 			name = Release;

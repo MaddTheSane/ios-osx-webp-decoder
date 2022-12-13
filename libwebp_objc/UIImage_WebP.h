@@ -7,7 +7,7 @@
  */
 
 #include <TargetConditionals.h>
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR || TARGET_OS_TV || TARGET_OS_MACCATALYST
 
 #import <UIKit/UIKit.h>
 
