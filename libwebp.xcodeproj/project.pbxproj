@@ -659,6 +659,7 @@
 		8FA92BB0196ED365002C72DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/webp.dst;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -685,6 +686,7 @@
 		8FA92BB1196ED365002C72DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/webp.dst;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
