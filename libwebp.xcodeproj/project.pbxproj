@@ -46,6 +46,7 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		5515817424DB816C00105AEE /* yuv_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817324DB816C00105AEE /* yuv_sse41.c */; };
 		5515817624DB819700105AEE /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817524DB819700105AEE /* upsampling_sse41.c */; };
+		5572DF5D2961847A0071474C /* lossless_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5572DF5C2961847A0071474C /* lossless_sse41.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; platformFilters = (macos, ); };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
 		5590EB2C24A1D61800DA060E /* cost_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 5590EB2B24A1D61800DA060E /* cost_neon.c */; };
@@ -143,6 +144,7 @@
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
 		5515817324DB816C00105AEE /* yuv_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv_sse41.c; sourceTree = "<group>"; };
 		5515817524DB819700105AEE /* upsampling_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = upsampling_sse41.c; sourceTree = "<group>"; };
+		5572DF5C2961847A0071474C /* lossless_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lossless_sse41.c; sourceTree = "<group>"; };
 		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
 		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
 		55871F03235E5B5800528BDF /* rescaler_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler_sse2.c; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				42E0D1EF1B4485AE00932957 /* dec_clip_tables.c */,
 				42E0D1F11B4485D800932957 /* lossless_neon.c */,
 				42E0D1F21B4485D800932957 /* lossless_sse2.c */,
+				5572DF5C2961847A0071474C /* lossless_sse41.c */,
 				8FA92C0E196ED453002C72DF /* lossless.c */,
 				42E0D2561B448AA300932957 /* rescaler.c */,
 				5590EB3124A1D6AC00DA060E /* rescaler_neon.c */,
@@ -496,6 +499,7 @@
 				8F1600FF196FEBBB000DC45D /* NSImage+WebP.m in Sources */,
 				42E0D2401B4486B800932957 /* webp_dec.c in Sources */,
 				42E0D23E1B4486B800932957 /* vp8_dec.c in Sources */,
+				5572DF5D2961847A0071474C /* lossless_sse41.c in Sources */,
 				5590EB3224A1D6AC00DA060E /* rescaler_neon.c in Sources */,
 				42E0D1F61B44860500932957 /* yuv_sse2.c in Sources */,
 				8FA92C18196ED453002C72DF /* dec.c in Sources */,
