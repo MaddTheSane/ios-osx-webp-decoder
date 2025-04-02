@@ -10,7 +10,7 @@
 #import "CGImage_WebP.h"
 #include "decode.h"
 
-/** @brief callback function of CoreGraphics to free underlying memory */
+/** @brief Callback function of CoreGraphics to free underlying memory. */
 static void free_data(void *info, const void *data, size_t size) {
     if(info != NULL) {
         WebPFreeDecBuffer(&(((WebPDecoderConfig *)info)->output));
@@ -52,7 +52,7 @@ CGImageRef CGImageFromWebPData(CFDataRef data) {
     WebPDecode(CFDataGetBytePtr(data), CFDataGetLength(data), config);
 
     // create image provider on output of webp decoder
-    CGDataProviderRef provider = CGDataProviderCreateWithData(config, config->output.u.RGBA.rgba, width*height*4, free_data);
+    CGDataProviderRef provider = CGDataProviderCreateWithData(config, config->output.u.RGBA.rgba, config->output.u.RGBA.size, free_data);
 
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateWithName(kCGColorSpaceSRGB);
     const CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;

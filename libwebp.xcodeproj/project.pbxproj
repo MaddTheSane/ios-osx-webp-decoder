@@ -46,6 +46,7 @@
 		42E0D2571B448AA300932957 /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 42E0D2561B448AA300932957 /* rescaler.c */; };
 		5515817424DB816C00105AEE /* yuv_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817324DB816C00105AEE /* yuv_sse41.c */; };
 		5515817624DB819700105AEE /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5515817524DB819700105AEE /* upsampling_sse41.c */; };
+		553431802D9DDE1F00AC35B3 /* cpu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5534317F2D9DDE1F00AC35B3 /* cpu.h */; };
 		5572DF5D2961847A0071474C /* lossless_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 5572DF5C2961847A0071474C /* lossless_sse41.c */; };
 		55871EE4235D776500528BDF /* TSSTWebPImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55871EE3235D776400528BDF /* TSSTWebPImageRep.m */; platformFilters = (macos, ); };
 		55871F04235E5B5800528BDF /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 55871F03235E5B5800528BDF /* rescaler_sse2.c */; };
@@ -144,6 +145,7 @@
 		42E0D2561B448AA300932957 /* rescaler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rescaler.c; sourceTree = "<group>"; };
 		5515817324DB816C00105AEE /* yuv_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv_sse41.c; sourceTree = "<group>"; };
 		5515817524DB819700105AEE /* upsampling_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = upsampling_sse41.c; sourceTree = "<group>"; };
+		5534317F2D9DDE1F00AC35B3 /* cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
 		5572DF5C2961847A0071474C /* lossless_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lossless_sse41.c; sourceTree = "<group>"; };
 		55871EE2235D776400528BDF /* TSSTWebPImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTWebPImageRep.h; sourceTree = "<group>"; usesTabs = 1; };
 		55871EE3235D776400528BDF /* TSSTWebPImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTWebPImageRep.m; sourceTree = "<group>"; usesTabs = 1; };
@@ -165,7 +167,7 @@
 		8FA92B8C196ED365002C72DF /* WebPMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebPMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA92B8F196ED365002C72DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FA92B9D196ED365002C72DF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8FA92BA0196ED365002C72DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8FA92BA0196ED365002C72DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FA92C06196ED453002C72DF /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpu.c; sourceTree = "<group>"; };
 		8FA92C07196ED453002C72DF /* dec_neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dec_neon.c; sourceTree = "<group>"; };
 		8FA92C08196ED453002C72DF /* dec_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dec_sse2.c; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		8FA92C21196ED455002C72DF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				5534317F2D9DDE1F00AC35B3 /* cpu.h */,
 				5598663323751A0400F5A744 /* common_sse2.h */,
 				5598663023751A0400F5A744 /* common_sse41.h */,
 				8FA92C0A196ED453002C72DF /* dsp.h */,
@@ -427,6 +430,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553431802D9DDE1F00AC35B3 /* cpu.h in Headers */,
 				5598663423751A0500F5A744 /* common_sse41.h in Headers */,
 				55DC37F5235EA7AA00132291 /* CGImage_WebP.h in Headers */,
 				5598662F237519CA00F5A744 /* lossless_common.h in Headers */,
